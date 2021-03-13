@@ -34,7 +34,7 @@ usemodebtn.addEventListener("click", e => {
 
     function MenuExpanded() {
         if (SHA256(pkeybox.value) === hashbox.value) {
-            hdrtl.innerText = "Valid";
+            hdrtl.innerText = "Valid Key";
             hdrtl.style.color = "rgb(0, 224, 49)"
 
             setTimeout(() => {
@@ -43,7 +43,7 @@ usemodebtn.addEventListener("click", e => {
             }, 1000);
         }
         else {
-            hdrtl.innerText = "Invalid";
+            hdrtl.innerText = "Invalid Key";
             hdrtl.style.color = "rgb(255, 0, 0)"
             setTimeout(() => {
                 hdrtl.style.color = "";
