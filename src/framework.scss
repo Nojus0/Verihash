@@ -1,0 +1,51 @@
+$primary: rgb(245, 245, 245);
+$primary-hover: rgb(235, 235, 235);
+$primary-click: rgb(201, 201, 201);
+.button {
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+    background: $primary;
+    border-radius: 12px;
+    text-align: center;
+    outline: none;
+    border: none;
+    transition: 0.06s background ease-in-out, 0.1s transform ease-in-out;
+    margin: 1.5%;
+    &:hover {
+        background: $primary-hover;
+        transform: scale(1.03);
+    }
+    &:active {
+        transition: 0.01s transform ease-in-out;
+        transform: scale(1);
+        background: $primary-click;
+    }
+}
+.textbox {
+    &::selection {
+        background: rgba(0, 0, 0, 0.158);
+    }
+    &:hover {
+        transform: scale(1.02);
+    }
+    &:focus {
+        transition: 0.03s transform ease-in-out;
+        transform: scale(1.07);
+        background: $primary-click;
+        border-radius: 14px;
+        background: $primary-hover;
+    }
+    border-radius: 4px;
+    background: $primary;
+    margin: 1.5%;
+    font-family: "Roboto", sans-serif;
+    transition: 0.1s background ease-in-out, 0.1s transform ease-in-out, 0.1s border-radius ease-in-out;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: rgb(243, 243, 243);
+}
+
+.size-medium {
+    padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+}

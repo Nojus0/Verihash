@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="src/index.ts"></script>
+    <meta name="description" content="Validate a sha256 hash or Create one youself. Can be used as an NFT hash generator, doesn't need any blockchain.">
+    
+    <title>Hashing</title>
+</head>
+
+<body>
+    <div id="root">
+        <div id="card">
+            <div style="display: flex; justify-content: center;">
+                <h1 id="header-title">Generate Hash</h1>
+            </div>
+            <input tabindex="0" class="textbox size-medium" id="Hash" placeholder="Text" type="text">
+            <input style="padding: 0; margin: 0;" class="textbox size-medium" id="privateKey" placeholder="Private Key"
+                type="text">
+            <button class="button size-medium" id="genHash">Generate Hash</button>
+            <button class="button size-medium" id="ChangeMode">Change to Validation</button>
+        </div>
+    </div>
+</body>
+
+</html>
