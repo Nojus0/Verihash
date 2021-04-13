@@ -18,11 +18,26 @@
     </div>
     <div id="root">
         <div id="card">
-            <input tabindex="0" class="textbox size-medium" id="Hash" placeholder="Text" type="text">
-            <input style="padding: 0; margin: 0;" class="textbox size-medium" id="privateKey" placeholder="Private Key"
-                type="text">
-            <button class="button size-medium" id="genHash">Generate Hash</button>
-            <button class="button size-medium" id="ChangeMode">Change to Validation</button>
+
+
+            <div class="radio" style="align-self: center;">
+                <button id="sha" class="button selected">SHA-256</button>
+                <button id="aes" class="button">AES</button>
+            </div>
+
+            <input tabindex="0" class="textbox" id="Hash" placeholder="Text" type="text">
+
+            <input tabindex="-1" class="textbox collapse" id="privateKey" placeholder="Private Key" type="text">
+            
+            <input tabindex="-1" class="textbox collapse" id="Output" placeholder="Output" type="text">
+
+            <button class="button" id="genHash">Generate Hash</button>
+            <button class="button" id="ChangeMode">Switch to Validation</button>
+
+            <div class="radio" style="align-self: flex-end;">
+                <button id="RadioBase64" class="button selected">BASE64</button>
+                <button id="RadioHex" class="button">HEX</button>
+            </div>
         </div>
     </div>
 </body>

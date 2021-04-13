@@ -1,0 +1,53 @@
+@use "./config" as framework;
+
+.textbox {
+    $textbox-margin: 0.5rem;
+    $textbox-padding: 0.85rem;
+    $expand-speed: 0.335s;
+    $click-focus-speed: 0.05s;
+    $hover-speed: 0.1s;
+
+    padding: $textbox-padding;
+    margin: $textbox-margin;
+    background: framework.$primary;
+    transition: $click-focus-speed transform ease-in-out;
+
+    &::selection {
+        background: rgb(216, 216, 216);
+    }
+    &.collapse {
+        transition: $expand-speed margin ease-in-out, $expand-speed height ease-in-out,
+            $click-focus-speed transform ease-in-out;
+        margin: 0;
+        padding: 0;
+        height: 0;
+    }
+
+    &.expand {
+        transition: $expand-speed margin ease-in-out, $expand-speed padding ease-in-out,
+            $expand-speed height ease-in-out, $click-focus-speed transform ease-in-out;
+
+        margin: $textbox-margin;
+        padding: $textbox-padding;
+        height: 3rem;
+    }
+
+    &:hover {
+        transition: $hover-speed transform ease-in;
+        transform: scale(1.04);
+    }
+
+    &:focus-visible {
+        transition: 0.1s background ease-in-out;
+        transition: $click-focus-speed transform ease-in;
+        background: framework.$primary-hover;
+        transform: scale(1.08);
+        border-radius: 0.6rem;
+    }
+
+    border-radius: 0.375rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    border: none;
+    outline: none;
+}

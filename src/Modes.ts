@@ -1,36 +1,28 @@
-import { ChangeMode, hashbox, hdrtl, pkeybox, usemodebtn } from "./Elements";
+import { SHA, SHA256Validate } from "./components/SHA256";
+import { AES } from "./components/AES"
+import { AESDecrypt } from "./components/AESDecrypt"
+import "./Modes/FirstButton";
+import "./Modes/SecondButton"
 
 export enum Mode {
-    Generate,
-    Validate
+    AES,
+    AESDecypt,
+    SHA256,
+    SHA256Validate
 }
+export let CurrentMode = Mode.SHA256;
 
-export let CurrentMode = Mode.Generate;
-
-
-export function SetMode(mode: Mode) {
-    if (mode === Mode.Validate) {
-        ChangeMode.innerText = "Change to Generator"
-        hdrtl.innerText = "Validate Hash"
-        usemodebtn.innerText = "Validate";
-        hashbox.placeholder = "Hash"
-        pkeybox.style.margin = "0.5rem 0 0.5rem 0";
-        pkeybox.style.padding = "0.85rem 0.85rem 0.85rem 0.85rem"
-        pkeybox.style.height = "3rem";
-        pkeybox.style.width = "auto"
-        CurrentMode = Mode.Validate;
-    } else if (mode === Mode.Generate) {
-        ChangeMode.innerText = "Change to Validation"
-        hashbox.placeholder = "Text"
-        hdrtl.innerText = "Generate Hash"
-        usemodebtn.innerText = "Generate Hash"
-        pkeybox.style.margin = "0px";
-        pkeybox.style.padding = "0px"
-        pkeybox.style.height = "0px";
-        CurrentMode = Mode.Generate;
+export function SetMode(mode: Mode) { // Change menu
+    CurrentMode = mode;
+    switch (mode) {
+        case Mode.SHA256Validate:
+            return SHA256Validate();
+        case Mode.SHA256:
+            return SHA();
+        case Mode.AES:
+            return AES();
+        case Mode.AESDecypt:
+            return AESDecrypt();
     }
 }
-
-
-
 
