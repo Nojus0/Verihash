@@ -13,16 +13,16 @@
     text-align: center;
     outline: none;
     border: none;
-    transition: 0.1s transform ease-in-out;
+    transition: 0.1s transform ease, 0.1s background ease;
     &:hover {
+        transform: scale(1.02);
         background: framework.$primary-hover;
-        transform: scale(1.03);
     }
     &:focus-visible {
-        transform: scale(1.05);
+        transform: scale(1.06);
     }
     &:active {
-        transition: 0.01s transform ease-in-out;
+        transition: 0.01s transform ease;
         transform: scale(1);
         background: framework.$primary-click;
     }

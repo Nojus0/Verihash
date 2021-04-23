@@ -9,7 +9,7 @@ export function AESDecrypt() {
     HeaderTitle.innerText = "Decrypt text with AES"
     FirstBox.placeholder = "Text";
     SecondBox.placeholder = "Decrypt Key";
-    FirstButton.innerText = "Descrypt";
+    FirstButton.innerText = "Decrypt";
     SecondButton.innerText = "Switch to Encryption"
 }
 

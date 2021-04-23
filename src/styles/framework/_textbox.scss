@@ -1,16 +1,13 @@
 @use "./config" as framework;
 
 .textbox {
-    $textbox-margin: 0.5rem;
-    $textbox-padding: 0.85rem;
     $expand-speed: 0.335s;
     $click-focus-speed: 0.05s;
     $hover-speed: 0.1s;
-
-    padding: $textbox-padding;
-    margin: $textbox-margin;
+    margin: 0.5rem;
+    padding: 0.85rem;
     background: framework.$primary;
-    transition: $click-focus-speed transform ease-in-out;
+    transition: $click-focus-speed transform ease-in-out, $hover-speed transform ease-in;
 
     &::selection {
         background: rgb(216, 216, 216);
@@ -26,14 +23,10 @@
     &.expand {
         transition: $expand-speed margin ease-in-out, $expand-speed padding ease-in-out,
             $expand-speed height ease-in-out, $click-focus-speed transform ease-in-out;
-
-        margin: $textbox-margin;
-        padding: $textbox-padding;
         height: 3rem;
     }
 
     &:hover {
-        transition: $hover-speed transform ease-in;
         transform: scale(1.04);
     }
 
@@ -41,7 +34,7 @@
         transition: 0.1s background ease-in-out;
         transition: $click-focus-speed transform ease-in;
         background: framework.$primary-hover;
-        transform: scale(1.08);
+        transform: scale(1.06);
         border-radius: 0.6rem;
     }
 

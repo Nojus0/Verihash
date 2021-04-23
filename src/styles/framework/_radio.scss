@@ -5,18 +5,9 @@ $radio-text-selected: rgb(228, 228, 228);
 .radio {
     background: $radio-background;
     border-radius: 0.4rem;
-    margin: 0.5rem;
-    padding: 0 0.2rem 0 0.2rem;
     display: flex;
-    justify-content: space-evenly;
-
     .selected {
         background: $radio-background-selected;
         color: $radio-text-selected;
-    }
-
-    button {
-        margin: 0.4rem 0.35rem 0.4rem 0.35rem;
-        padding: 0.7rem;
     }
 }

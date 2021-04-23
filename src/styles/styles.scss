@@ -5,27 +5,80 @@
 * {
     box-sizing: border-box;
 }
-
+@media only screen and (max-width: 55em) {
+    // Disable scale effect causes overflow
+    .button {
+        &:hover,
+        &:focus-visible,
+        &:active {
+            transform: scale(1);
+        }
+    }
+    .textbox {
+        &:hover,
+        &:active,
+        &:focus-visible {
+            transform: scale(1);
+        }
+    }
+}
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
 
-#header-title {
-    transition: 0.3s color ease-in-out;
-    text-align: center;
-    margin: 0;
-}
+.title {
+    margin: 2.5rem 0 1.5rem 0;
+    h1 {
+        align-items: center;
+        transition: 0.3s color ease-in-out;
+        margin: 0;
+    }
 
-#card {
-    width: 50%;
     display: flex;
-    margin: 1.5rem 0 0 0;
-    flex-direction: column;
-}
-#root {
-    display: flex;
-    align-items: flex-end;
     justify-content: center;
 }
 
+#inputfields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#actionfields {
+    button {
+        width: 100%;
+    }
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mode {
+    margin: 0.75rem;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    button {
+        flex-grow: 1;
+    }
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#root {
+    width: clamp(0em, 100%, 50em);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
