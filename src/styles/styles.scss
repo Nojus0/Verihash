@@ -30,7 +30,7 @@ body {
 .title {
     margin: 2.5rem 0 1.5rem 0;
     h1 {
-        align-items: center;
+        text-align: center;
         transition: 0.3s color ease-in-out;
         margin: 0;
     }
@@ -48,12 +48,12 @@ body {
 
 #actionfields {
     button {
-        width: 100%;
+        flex: 1 1 45%;
     }
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
 }
 
 .mode {
@@ -76,9 +76,14 @@ body {
 }
 
 #root {
-    width: clamp(0em, 100%, 50em);
+    width: clamp(5em, 100%, 50em);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.encoding {
+    align-self: flex-end;
+    margin: 0.5rem;
 }
