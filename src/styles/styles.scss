@@ -1,34 +1,12 @@
 @use "./framework/button";
 @use "./framework/textbox";
 @use "./framework/radio";
+@use "./mobile";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-* {
-    box-sizing: border-box;
-}
-@media only screen and (max-width: 55em) {
-    // Disable scale effect causes overflow
-    .button {
-        &:hover,
-        &:focus-visible,
-        &:active {
-            transform: scale(1);
-        }
-    }
-    .textbox {
-        &:hover,
-        &:active,
-        &:focus-visible {
-            transform: scale(1);
-        }
-    }
-}
-body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-}
+
 
 .title {
-    margin: 3rem 0 1.75rem 0;
+    padding: 3rem 0 1.75rem 0;
     h1 {
         text-align: center;
         transition: 0.3s color ease-in-out;
@@ -68,22 +46,10 @@ body {
     }
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 #root {
     width: clamp(5em, 100%, 50em);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.encoding {
-    align-self: flex-end;
-    margin: 0.5rem;
 }

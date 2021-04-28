@@ -77,35 +77,33 @@
     <div class="title">
         <h1>Generate Hash</h1>
     </div>
-    <div id="container">
 
-        <div id="root">
+    <div id="root">
 
-            <div class="mode radio">
-                <button id="sha" class="button selected">SHA-256</button>
-                <button id="aes" class="button">AES</button>
-            </div>
-
-
-            <div id="inputfields">
-                <input tabindex="0" class="textbox" id="Hash" placeholder="Text" type="text">
-
-                <input tabindex="-1" class="textbox collapse" id="privateKey" placeholder="Private Key" type="text">
-
-                <input tabindex="-1" class="textbox collapse" id="Output" placeholder="Output" type="text">
-            </div>
-
-            <div id="actionfields">
-                <button class="button" id="genHash">Generate Hash</button>
-                <button class="button" id="ChangeMode">Switch to Validation</button>
-            </div>
-
-            <div class="radio encoding">
-                <button id="RadioBase64" class="button selected">BASE64</button>
-                <button id="RadioHex" class="button">HEX</button>
-            </div>
-
+        <div class="mode radio">
+            <button id="sha" class="button selected">SHA-256</button>
+            <button id="aes" class="button">AES</button>
         </div>
+
+
+        <div id="inputfields">
+            <input tabindex="0" class="textbox" id="Hash" placeholder="Text" type="text">
+
+            <input tabindex="-1" class="textbox collapse" id="privateKey" placeholder="Private Key" type="text">
+
+            <input tabindex="-1" class="textbox collapse" id="Output" placeholder="Output" type="text">
+        </div>
+
+        <div id="actionfields">
+            <button class="button" id="genHash">Generate Hash</button>
+            <button class="button" id="ChangeMode">Switch to Validation</button>
+        </div>
+
+        <div class="radio" style="align-self: flex-end; margin: 0.5rem;">
+            <button id="RadioBase64" class="button selected">BASE64</button>
+            <button id="RadioHex" class="button">HEX</button>
+        </div>
+
     </div>
 </body>
 

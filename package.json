@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/node": "^14.14.34",
     "parcel-bundler": "^1.12.5",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "sass": "^1.32.8",
     "typescript": "^4.2.3",
@@ -25,7 +26,9 @@
   "dependencies": {
     "workbox-strategies": "^6.1.5"
   },
-  "staticFiles":{
-    "staticPath": ["robots.txt"]
-  } 
+  "staticFiles": {
+    "staticPath": [
+      "robots.txt"
+    ]
+  }
 }

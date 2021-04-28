@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+@media only screen and (max-width: 55em) {
+    // Disable scale effect causes overflow
+    .button {
+        &:hover,
+        &:focus-visible,
+        &:active {
+            transform: scale(1);
+        }
+    }
+    .textbox {
+        &:hover,
+        &:active,
+        &:focus-visible {
+            transform: scale(1);
+        }
+    }
+}

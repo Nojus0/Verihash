@@ -1,6 +1,6 @@
 export const SecondBox = <HTMLInputElement>document.getElementById("privateKey")
 export const FirstBox = <HTMLInputElement>document.getElementById("Hash")
-export const HeaderTitle = document.querySelector(".title > h1")
+export const HeaderTitle = <HTMLHeadingElement>document.querySelector(".title > h1")
 export const FirstButton = <HTMLButtonElement>document.getElementById("genHash");
 export const SecondButton = <HTMLButtonElement>document.getElementById("ChangeMode");
 export const Radio1 = <HTMLButtonElement>document.getElementById("sha");
