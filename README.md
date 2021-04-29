@@ -1,3 +1,3 @@
 ##### Verihash
-###### Source of Verihash.netlify.app
+###### Source of https://verihash.netlify.app/
 ###### Uses Typescript and Parcel
